@@ -1,0 +1,58 @@
+{
+  "name": "nextjs-woocommerce",
+  "version": "1.1.8",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,ts,tsx,json}\"",
+    "playwright": "npx playwright test",
+    "playwright:debug": "npx playwright test --debug",
+    "playwright:codegen": "playwright codegen",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm i && npm run format"
+  },
+  "keywords": [
+    "next.js",
+    "next",
+    "javascript",
+    "framer"
+  ],
+  "author": "w3bdesign",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/client": "^3.8.4",
+    "@types/react": "^18.2.22",
+    "algoliasearch": "^4.20.0",
+    "autoprefixer": "^10.4.15",
+    "framer-motion": "10.16.4",
+    "graphql": "^16.8.1",
+    "lodash": "^4.17.21",
+    "next": "^13.5.1",
+    "nprogress": "^0.2.0",
+    "postcss": "^8.4.30",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.46.1",
+    "react-instantsearch-dom": "^6.40.4",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.38.0",
+    "@types/lodash": "^4.14.198",
+    "@types/node": "20.6.2",
+    "@types/nprogress": "^0.2.0",
+    "@types/react-instantsearch-dom": "^6.12.3",
+    "@types/uuid": "^9.0.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "babel-plugin-styled-components": "^2.1.4",
+    "eslint": "^8.49.0",
+    "eslint-config-next": "^13.5.1",
+    "postcss-preset-env": "^9.1.4",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
+  }
+}
