@@ -21,7 +21,8 @@ export const INPUT_FIELDS = [
     id: 3,
     label: 'Postnummer',
     name: 'postcode',
-    customValidation: { required: true, minlength: 4, pattern: '[+0-9]{4,6}' },
+    customValidation: { required: true, minlength: 4 },
+    // customValidation: { required: true, minlength: 4, pattern: '[+0-9]{4,6}' },
   },
   {
     id: 4,
