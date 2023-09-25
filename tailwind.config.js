@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         'hero-background': "url('/images/hero.jpg')",
       },
+      logoImg: {
+        'logo-background': "url('/images/logo.png')",
+      },
     },
   },
   plugins: [],
