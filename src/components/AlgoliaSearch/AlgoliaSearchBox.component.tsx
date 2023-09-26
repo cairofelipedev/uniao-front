@@ -31,7 +31,7 @@ const AlgoliaSearchBox = () => {
             translations={{
               submitTitle: 'Søk',
               resetTitle: 'Slett søketekst',
-              placeholder: 'Søk etter produkter',
+              placeholder: 'Busque seu produto',
             }}
             className={`px-4 py-2 text-base bg-white border outline-none rounded ${
               hasFocus ? 'border-black' : 'border-gray-400'
