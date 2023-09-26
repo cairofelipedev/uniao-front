@@ -114,7 +114,7 @@ const CartContents = () => {
             >
               <div className="lg:m-2 xl:m-4 xl:w-1/6 lg:w-1/6 sm:m-2 w-auto">
                 <span className="block mt-2 font-extrabold">
-                  Slett: <br />
+                  Excluir: <br />
                 </span>
                 <span className="inline-block mt-4 w-20 h-12 md:w-full lg:w-full xl:w-full">
                   <Button
@@ -127,13 +127,13 @@ const CartContents = () => {
                       )
                     }
                   >
-                    Slett
+                    Excluir
                   </Button>
                 </span>
               </div>
               <div className="lg:m-2 xl:m-4 xl:w-1/6 lg:w-1/6 sm:m-2 w-auto">
                 <span className="block mt-2 font-extrabold">
-                  Navn: <br />
+                  Nome: <br />
                 </span>
                 <span className="inline-block mt-4 w-20 h-12 md:w-full lg:w-full xl:w-full">
                   {item.product.node.name}
@@ -141,7 +141,7 @@ const CartContents = () => {
               </div>
               <div className="lg:m-2 xl:m-4 xl:w-1/6 lg:w-1/6 sm:m-2 w-auto">
                 <span className="block mt-2 font-extrabold">
-                  Antall: <br />
+                 Quantidade: <br />
                 </span>
                 <span className="inline-block mt-4 w-20 h-12 md:w-full lg:w-full xl:w-full">
                   <input
@@ -187,7 +187,7 @@ const CartContents = () => {
         {!isCheckoutPage && data?.cart?.contents?.nodes.length ? (
           <div className="mt-4 mx-auto">
             <Link href="/kasse" passHref>
-              <Button>GÅ TIL KASSE</Button>
+              <Button>FAZER LOGIN</Button>
             </Link>
           </div>
         ) : null}

@@ -147,7 +147,7 @@ const AddToCart = ({ product, variationId }: IProductRootObject) => {
         handleButtonClick={() => handleAddToCart()}
         buttonDisabled={addToCartLoading || requestError}
       >
-        KJØP
+        COMPRAR
       </Button>
     </>
   );
