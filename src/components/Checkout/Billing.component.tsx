@@ -23,13 +23,13 @@ const OrderButton = () => {
 
   return (
     <div className="w-full p-2">
-      <input
+      <select
         placeholder="paymentMethod"
-        type="hidden"
-        value="cod"
-        checked
         {...register('paymentMethod')}
-      />
+      >
+        <option value="cod">COD</option>
+        <option value="pagseguro">PagSeguro</option>
+      </select>
       <div className="mt-4 flex justify-center">
         <Button>FINALIZAR PEDIDO</Button>
       </div>
