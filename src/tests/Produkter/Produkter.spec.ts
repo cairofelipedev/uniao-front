@@ -25,20 +25,20 @@ test.describe('Produkter', () => {
       timeout: 5000,
     });
 
-    await page.getByRole('link', { name: 'Handlekurv' }).click();
+    await page.getByRole('link', { name: 'Carrinho' }).click();
 
-    await page.locator('section').filter({ hasText: 'Handlekurv' }).waitFor();
+    await page.locator('section').filter({ hasText: 'Carrinho' }).waitFor();
 
-    // Check that that Handlekurv is visible
+    // Check that that Carrinho is visible
     await expect(
-      page.locator('section').filter({ hasText: 'Handlekurv' }),
+      page.locator('section').filter({ hasText: 'Carrinho' }),
     ).toBeVisible();
 
     // Check that we can go to Kasse
 
     await page.getByRole('button', { name: 'GÅ TIL KASSE' }).click();
 
-    await page.waitForURL('http://localhost:3000/kasse', {
+    await page.waitForURL('http://localhost:3000/finalizar-pedido', {
       waitUntil: 'networkidle',
     });
 

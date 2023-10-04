@@ -54,7 +54,7 @@ const SingleProduct = ({ product }: IProductRootObject) => {
       {/* Show loading spinner while loading, and hide content while loading */}
       {isLoading ? (
         <div className="h-56 mt-20">
-          <p className="text-2xl font-bold text-center">Laster produkt ...</p>
+          <p className="text-2xl font-bold text-center">Laster produto ...</p>
           <br />
           <LoadingSpinner />
         </div>

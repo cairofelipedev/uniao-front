@@ -23,7 +23,7 @@ const Stickynav = () => (
       >
         <ul className="items-center justify-between pt-4 text-base text-gray-700 md:flex md:pt-0">
           <li>
-            <Link href="/produkter">
+            <Link href="/produtos">
               <span className="inline-block py-2 pr-4 text-xl font-bold no-underline hover:underline">
                 Produtos
               </span>

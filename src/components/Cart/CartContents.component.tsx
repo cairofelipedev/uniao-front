@@ -35,7 +35,7 @@ const CartContents = () => {
 
   const { setCart } = useContext(CartContext);
 
-  const isCheckoutPage = router.pathname === '/kasse';
+  const isCheckoutPage = router.pathname === '/finalizar-pedido';
 
   // Get cart data query
   const { data, refetch } = useQuery(GET_CART, {
@@ -173,7 +173,7 @@ const CartContents = () => {
           ))
         ) : (
           <h1 className="text-2xl font-bold mx-auto">
-            Ingen produkter i handlekurven
+            Ingen produto i carrinho
           </h1>
         )}
         {updateCartProcessing && (
@@ -186,7 +186,7 @@ const CartContents = () => {
         )}
         {!isCheckoutPage && data?.cart?.contents?.nodes.length ? (
           <div className="mt-4 mx-auto">
-            <Link href="/kasse" passHref>
+            <Link href="/finalizar-pedido" passHref>
               <Button>FAZER LOGIN</Button>
             </Link>
           </div>

@@ -43,8 +43,8 @@ const SearchResults = ({
   return (
     <article className="cursor-pointer hit">
       <Link
-        href="/produkt/[post]"
-        as={`/produkt/${trimmedProductName}?id=${objectID}`}
+        href="/produto/[post]"
+        as={`/produto/${trimmedProductName}?id=${objectID}`}
         passHref
       >
         <div className="flex p-6 bg-white">

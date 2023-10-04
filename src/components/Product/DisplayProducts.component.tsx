@@ -79,7 +79,7 @@ const DisplayProducts = ({ products }: IDisplayProductsProps) => (
                 className="flex flex-col p-6 md:w-1/2 xl:w-1/4"
               >
                 <Link
-                  href={`/produkt/${encodeURIComponent(
+                  href={`/produto/${encodeURIComponent(
                     slug,
                   )}?id=${encodeURIComponent(databaseId)}`}
                 >
@@ -105,7 +105,7 @@ const DisplayProducts = ({ products }: IDisplayProductsProps) => (
                 </Link>
 
                 <Link
-                  href={`/produkt/${encodeURIComponent(
+                  href={`/produto/${encodeURIComponent(
                     slug,
                   )}?id=${encodeURIComponent(databaseId)}`}
                 >
@@ -140,7 +140,7 @@ const DisplayProducts = ({ products }: IDisplayProductsProps) => (
         )
       ) : (
         <div className="mx-auto text-xl font-bold text-center text-gray-800 no-underline uppercase">
-          Ingen produkter funnet
+          Ingen produto funnet
         </div>
       )}
     </div>

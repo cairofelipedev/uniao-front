@@ -21,7 +21,7 @@ import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 const Produkter: NextPage = ({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
-  <Layout title="Produkter">
+  <Layout title="Produto">
     {products && <DisplayProducts products={products} />}
   </Layout>
 );
