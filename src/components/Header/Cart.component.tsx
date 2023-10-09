@@ -26,14 +26,14 @@ const Cart = ({ stickyNav }: ICartProps) => {
   return (
     <>
       <Link href="/carrinho">
-        <span className="text-red-500"
+        <span className="text-red-500 "
           aria-label="Carrinho"
         >
           <svg
             className={`${stickyNav ? 'fill-white' : 'fill-current'}`}
             xmlns="https://www.w3.org/2000/svg"
-            width="40"
-            height="40"
+            width="50"
+            height="50"
             viewBox="0 0 30 30"
             aria-label="Carrinho"
           >

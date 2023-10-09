@@ -145,7 +145,7 @@ const CheckoutForm = () => {
         <>
           {!cart && !orderCompleted && (
             <h1 className="text-2xl m-12 mt-24 font-bold text-center">
-              Ingen produto i carrinho
+              Nenhum produto no carrinho
             </h1>
           )}
           {orderCompleted && (
