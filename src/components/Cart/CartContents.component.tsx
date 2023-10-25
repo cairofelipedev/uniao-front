@@ -194,24 +194,24 @@ const CartContents = () => {
           ) : null}
         </div>
       </section>
-      <div class="h-screen bg-gray-100 pt-20">
-        <h1 class="mb-10 text-center text-2xl font-bold">Carrinho de compras</h1>
-        <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
-          <div class="rounded-lg md:w-2/3">
+      <div className="h-screen bg-gray-100 pt-20">
+        <h1 className="mb-10 text-center text-2xl font-bold">Carrinho de compras</h1>
+        <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+          <div className="rounded-lg md:w-2/3">
             {data?.cart?.contents?.nodes.length ? (
               data.cart.contents.nodes.map((item: IProductRootObject) => (
-                <div key={item.key} class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+                <div key={item.key} className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
                   <img src={item.product.node.image.sourceUrl}
-                    alt={item.product.node.name} class="w-full rounded-lg sm:w-40" />
-                  <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
-                    <div class="mt-5 sm:mt-0">
-                      <h2 class="text-lg font-bold text-gray-900">{item.product.node.name}</h2>
-                      <button class="mt-6 w-20 rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Excluir</button>
+                    alt={item.product.node.name} className="w-full rounded-lg sm:w-40" />
+                  <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+                    <div className="mt-5 sm:mt-0">
+                      <h2 className="text-lg font-bold text-gray-900">{item.product.node.name}</h2>
+                      <button className="mt-6 w-20 rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Excluir</button>
                     </div>
-                    <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
-                      <div class="flex items-center border-gray-100">
+                    <div className="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+                      <div className="flex items-center border-gray-100">
                         <div>
-                          <h2 class="text-lg font-bold text-gray-900">Qtd</h2>
+                          <h2 className="text-lg font-bold text-gray-900">Qtd</h2>
                           <input
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             type="number"
@@ -254,24 +254,24 @@ const CartContents = () => {
               </div>
             ) : null}
           </div>
-          <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
-            <div class="mb-2 flex justify-between">
-              <p class="text-gray-700">Subtotal</p>
-              <p class="text-gray-700">$129.99</p>
+          <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
+            <div className="mb-2 flex justify-between">
+              <p className="text-gray-700">Subtotal</p>
+              <p className="text-gray-700">$129.99</p>
             </div>
-            <div class="flex justify-between">
-              <p class="text-gray-700">Shipping</p>
-              <p class="text-gray-700">$4.99</p>
+            <div className="flex justify-between">
+              <p className="text-gray-700">Shipping</p>
+              <p className="text-gray-700">$4.99</p>
             </div>
-            <hr class="my-4" />
-            <div class="flex justify-between">
-              <p class="text-lg font-bold">Total</p>
-              <div class="">
-                <p class="mb-1 text-lg font-bold">$134.98 USD</p>
-                <p class="text-sm text-gray-700">including VAT</p>
+            <hr className="my-4" />
+            <div className="flex justify-between">
+              <p className="text-lg font-bold">Total</p>
+              <div className="">
+                <p className="mb-1 text-lg font-bold">$134.98 USD</p>
+                <p className="text-sm text-gray-700">including VAT</p>
               </div>
             </div>
-            <button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</button>
+            <button className="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</button>
           </div>
         </div>
       </div>
