@@ -3,8 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image'
 // Components
 import Cart from './Cart.component';
-import AlgoliaSearchBox from '../AlgoliaSearch/AlgoliaSearchBox.component';
-import MobileSearch from '../AlgoliaSearch/MobileSearch.component';
+
 
 // Utils
 import useIsMobile from '@/utils/hooks/useIsMobile';

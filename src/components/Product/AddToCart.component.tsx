@@ -25,20 +25,20 @@ interface IImage {
   sourceUrl: string;
 }
 
-interface IVariationNode {
-  __typename: string;
-  name: string;
-}
+// interface IVariationNode {
+//   __typename: string;
+//   name: string;
+// }
 
-interface IAllPaColors {
-  __typename: string;
-  nodes: IVariationNode[];
-}
+// interface IAllPaColors {
+//   __typename: string;
+//   nodes: IVariationNode[];
+// }
 
-interface IAllPaSizes {
-  __typename: string;
-  nodes: IVariationNode[];
-}
+// interface IAllPaSizes {
+//   __typename: string;
+//   nodes: IVariationNode[];
+// }
 
 export interface IVariationNodes {
   __typename: string;
