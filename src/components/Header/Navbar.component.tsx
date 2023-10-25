@@ -17,7 +17,7 @@ const Navbar = () => {
   const isMobile = useIsMobile();
   return (
     <>
-      <header>
+      <header className="hidden lg:block">
         <div className="mx-auto max-w-7xl px-6 py-5">
           <div className="grid grid-cols-5">
             <div className="hidden w-full md:flex md:items-center">

@@ -83,19 +83,19 @@ const DisplayProducts = ({ products }: IDisplayProductsProps) => (
                     slug,
                   )}?id=${encodeURIComponent(databaseId)}`}
                 >
-                  <div class="mx-auto mt-11 w-80 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg">
+                  <div className="mx-auto mt-11 w-80 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg">
                     <span>
                       {image ? (
                         <img
                           id="product-image"
-                          className="transition duration-500 ease-in-out transform cursor-pointer hover:grow hover:shadow-lg hover:scale-105"
+                          className="transition duration-500 ease-in-out transform cursor-pointer hover:grow hover:shadow-lg hover:scale-105 h-72 w-full"
                           alt={name}
                           src={image.sourceUrl}
                         />
                       ) : (
                         <img
                           id="product-image"
-                          className="transition duration-500 ease-in-out transform cursor-pointer hover:grow hover:shadow-lg hover:scale-105"
+                          className="transition duration-500 ease-in-out transform cursor-pointer hover:grow hover:shadow-lg hover:scale-105 h-40 w-full"
                           alt={name}
                           src={
                             process.env.NEXT_PUBLIC_PLACEHOLDER_SMALL_IMAGE_URL
@@ -103,19 +103,19 @@ const DisplayProducts = ({ products }: IDisplayProductsProps) => (
                         />
                       )}
                     </span>
-                    <div class="p-4">
-                      <h2 class="mb-2 text-lg font-medium  text-gray-900">{name}</h2>
+                    <div className="p-4">
+                      <h2 className="mb-2 text-lg font-medium  text-gray-900">{name}</h2>
                       {onSale && (
                         <div className="flex items-center">
-                          <p class="mr-2 text-lg font-semibold text-gray-900">
+                          <p className="mr-2 text-lg font-semibold text-gray-900">
                             {variations && filteredVariantPrice(price, '')}
                             {!variations && salePrice}
                           </p>
-                          <p class="text-base  font-medium text-gray-500 line-through">
+                          <p className="text-base  font-medium text-gray-500 line-through">
                             {variations && filteredVariantPrice(price, 'right')}
                             {!variations && regularPrice}
                           </p>
-                          {/* <p class="ml-auto text-base font-medium text-green-500">20% off</p> */}
+                          {/* <p className="ml-auto text-base font-medium text-green-500">20% off</p> */}
                         </div>
                       )}
                       {/* Display regular price when not on sale */}
