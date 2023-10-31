@@ -16,7 +16,12 @@ const Navbar = () => {
   const isMobile = useIsMobile();
   return (
     <>
-      <header className="hidden lg:block">
+      <nav className="sm:flex sm:justify-center sm:items-center bg-green-600 py-2">
+        <div className="flex flex-col sm:flex-row text-white">
+          Aproveite nossos maiores descontos de Halloween
+        </div>
+      </nav>
+      <header className="hidden lg:block shadow">
         <div className="mx-auto max-w-7xl px-6 py-5">
           <div className="grid grid-cols-5">
             <div className="hidden w-full md:flex md:items-center">
@@ -53,15 +58,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <nav className="sm:flex sm:justify-center sm:items-center bg-green-600 py-2">
-          <div className="flex flex-col sm:flex-row">
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-3 sm:mt-0" href="#">Home</a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-3 sm:mt-0" href="#">Shop</a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-3 sm:mt-0" href="#">Categories</a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-3 sm:mt-0" href="#">Contact</a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-3 sm:mt-0" href="#">About</a>
-          </div>
-        </nav>
       </header>
     </>
   );
