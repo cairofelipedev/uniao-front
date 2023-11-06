@@ -680,6 +680,13 @@
     "@types/react" "*"
     "@types/react-instantsearch-core" "*"
 
+"@types/react-slick@^0.23.11":
+  version "0.23.11"
+  resolved "https://registry.yarnpkg.com/@types/react-slick/-/react-slick-0.23.11.tgz#d349fee6709218e7a4b7839ccf80a070862373b6"
+  integrity sha512-52AbNhYN7u0ATqAUvap2MXNG3znUsJslAWgebUHrovvnJ6EG6oic+TZyC82XiwwvijRMyL2V0C2wPJbzsSwllw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^18.2.22":
   version "18.2.22"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.22.tgz#abe778a1c95a07fa70df40a52d7300a40b949ccb"
