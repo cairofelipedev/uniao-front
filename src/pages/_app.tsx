@@ -13,6 +13,8 @@ import type { AppProps } from 'next/app';
 // Styles
 import '@/styles/globals.css';
 import 'nprogress/nprogress.css';
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 // NProgress
 Router.events.on('routeChangeStart', () => NProgress.start());

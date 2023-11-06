@@ -47,8 +47,8 @@ interface IDisplayProductsProps {
  */
 
 const DisplayProducts = ({ products }: IDisplayProductsProps) => (
-  <section className="container mx-auto bg-white">
-    <div id="product-container" className="flex flex-wrap items-center">
+  <section className="container mx-auto">
+    <div id="product-container" className="grid lg:grid-cols-4 grid-cols-2 p-2">
       {products ? (
         products.map(
           ({
@@ -64,26 +64,26 @@ const DisplayProducts = ({ products }: IDisplayProductsProps) => (
           }) => {
             // Add padding/empty character after currency symbol here
             if (price) {
-              price = paddedPrice(price, 'kr');
+              price = paddedPrice(price, 'R$');
             }
             if (regularPrice) {
-              regularPrice = paddedPrice(regularPrice, 'kr');
+              regularPrice = paddedPrice(regularPrice, 'R$');
             }
             if (salePrice) {
-              salePrice = paddedPrice(salePrice, 'kr');
+              salePrice = paddedPrice(salePrice, 'R$');
             }
 
             return (
               <div
                 key={uuidv4()}
-                className="flex flex-col p-6 md:w-1/2 xl:w-1/4"
+                className="flex flex-col lg:p-4 p-1"
               >
                 <Link
                   href={`/produto/${encodeURIComponent(
                     slug,
                   )}?id=${encodeURIComponent(databaseId)}`}
                 >
-                  <div className="mx-auto mt-11 w-80 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg">
+                  <div className="mx-auto mt-10 w-full transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg">
                     <span>
                       {image ? (
                         <img
@@ -131,7 +131,7 @@ const DisplayProducts = ({ products }: IDisplayProductsProps) => (
         )
       ) : (
         <div className="mx-auto text-xl font-bold text-center text-gray-800 no-underline uppercase">
-          Ingen produto funnet
+          Produto sem Imagem
         </div>
       )}
     </div>

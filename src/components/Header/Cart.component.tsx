@@ -30,7 +30,7 @@ const Cart = ({ stickyNav }: ICartProps) => {
           aria-label="Carrinho"
         >
           <svg
-            className={`${stickyNav ? 'fill-white' : 'fill-current'}`}
+            className={`${stickyNav ? 'fill-green-600' : 'fill-current'}`}
             xmlns="https://www.w3.org/2000/svg"
             width="50"
             height="50"
@@ -50,7 +50,7 @@ const Cart = ({ stickyNav }: ICartProps) => {
       {productCount && (
         <span
           className={`w-5 h-5 -mt-2 text-center rounded-full text-sm        
-          ${stickyNav ? 'text-black bg-white' : 'text-white bg-red-500'}`}
+          ${stickyNav ? 'text-white bg-red-500' : 'text-white bg-red-500'}`}
         >
           {productCount}
         </span>

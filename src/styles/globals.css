@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: rgb(246, 246, 246);
+}
+
 #cart-div {
   width: 300px;
 }

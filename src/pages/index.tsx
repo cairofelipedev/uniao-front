@@ -1,5 +1,5 @@
 // Components
-import Hero from '@/components/Index/Hero.component';
+import Banners from '@/components/Index/Banners';
 import DisplayProducts from '@/components/Product/DisplayProducts.component';
 import Layout from '@/components/Layout/Layout.component';
 
@@ -23,7 +23,7 @@ const Index: NextPage = ({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <Layout title="Home">
-    <Hero />
+    <Banners />
     {products && <DisplayProducts products={products} />}
   </Layout>
 );

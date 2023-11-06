@@ -1,8 +1,7 @@
 import Link from 'next/link';
 
 import Cart from '@/components/Header/Cart.component';
-import Search from '@/components/AlgoliaSearch/AlgoliaSearchBox.component';
-import SVGMobileSearchIcon from '@/components/SVG/SVGMobileSearchIcon.component';
+import Image from 'next/image'
 
 import Hamburger from './Hamburger.component';
 
@@ -15,8 +14,11 @@ const Stickynav = () => (
     id="footer"
     className="fixed top-0 z-50 w-full md:hidden lg:hidden xl:hidden"
   >
-    <div className="container flex flex-wrap items-center justify-between px-6 py-3 mx-auto mt-0 md:min-w-96 bg-blue-800">
+    <div className="container flex flex-wrap items-center justify-between px-6 py-3 mx-auto mt-0 md:min-w-96 bg-white">
       <Hamburger />
+      <Link href="/">
+        <Image src="/logo.png" alt="Vercel Logo" width={131} height={150} />
+      </Link>
       <div
         className="order-3 hidden w-full md:flex md:items-center md:w-auto md:order-1"
         id="menu"
@@ -39,8 +41,6 @@ const Stickynav = () => (
         </ul>
       </div>
       <div className="flex items-center order-2 md:order-3" id="nav-content">
-        <Search />
-        <SVGMobileSearchIcon />
         <Cart stickyNav />
       </div>
     </div>

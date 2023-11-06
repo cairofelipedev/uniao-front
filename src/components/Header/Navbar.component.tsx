@@ -18,10 +18,10 @@ const Navbar = () => {
     <>
       <nav className="sm:flex sm:justify-center sm:items-center bg-green-600 py-2">
         <div className="flex flex-col sm:flex-row text-white">
-          Aproveite nossos maiores descontos de Halloween
+          Aproveite agora nossas ofertas de produtos, descontos de até 20% no pix
         </div>
       </nav>
-      <header className="hidden lg:block shadow">
+      <header className="hidden lg:block shadow-lg bg-white">
         <div className="mx-auto max-w-7xl px-6 py-5">
           <div className="grid grid-cols-5">
             <div className="hidden w-full md:flex md:items-center">

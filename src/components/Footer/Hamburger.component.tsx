@@ -7,7 +7,7 @@ import FadeLeftToRightItem from '@/components/Animations/FadeLeftToRightItem.com
 import LINKS from '@/utils/constants/LINKS';
 
 const hamburgerLine =
-  'h-1 w-10 my-1 rounded-full bg-white transition ease transform duration-300 not-sr-only';
+  'h-1 w-10 my-1 rounded-full bg-green-600 transition ease transform duration-300 not-sr-only';
 
 const opacityFull = 'opacity-100 group-hover:opacity-100';
 
@@ -43,7 +43,7 @@ const Hamburger = () => {
   }, [setisExpanded]);
 
   return (
-    <div className="z-50 md:hidden lg:hidden xl:hidden bg-blue-800">
+    <div className="z-50 md:hidden lg:hidden xl:hidden">
       <button
         className="flex flex-col w-16 rounded justify-center items-center group"
         data-cy="hamburger"
@@ -52,7 +52,7 @@ const Hamburger = () => {
         aria-expanded={isExpanded}
         type="button"
       >
-        <span className="sr-only text-white text-2xl">Hamburger</span>
+        <span className="sr-only text-2xl">Hamburger</span>
         <span
           data-testid="hamburgerline"
           className={`${hamburgerLine} ${
@@ -82,7 +82,7 @@ const Hamburger = () => {
         <div
           id="mobile-menu"
           aria-hidden={!isExpanded}
-          className={`absolute left-0 top-24 z-10 w-full text-center text-black bg-white ${hidden}`}
+          className={`absolute left-0 top-19 mt-2 z-10 w-full text-center text-black bg-white ${hidden}`}
         >
           <ul>
             {LINKS.map(({ id, title, href }) => (
