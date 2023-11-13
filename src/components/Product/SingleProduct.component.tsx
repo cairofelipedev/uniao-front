@@ -113,9 +113,9 @@ const SingleProduct = ({ product }: IProductRootObject) => {
               </div>
             </div>
           </div>
-          {/* <p className="pt-1 mt-4 text-2xl text-gray-900">
+          <p className="pt-1 mt-4 text-2xl text-white">
             {DESCRIPTION_WITHOUT_HTML}
-          </p> */}
+          </p>
         </div>
       )}
     </section>
