@@ -12,9 +12,9 @@ import LoadingSpinner from '@/components/LoadingSpinner/LoadingSpinner.component
 const SingleProduct = ({ product }: IProductRootObject) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [selectedVariation, setSelectedVariation] = useState<number>();
-  
+
   const placeholderFallBack = 'https://via.placeholder.com/600';
-  
+
   let DESCRIPTION_WITHOUT_HTML;
 
   useEffect(() => {
@@ -30,13 +30,13 @@ const SingleProduct = ({ product }: IProductRootObject) => {
 
   // Add padding/empty character after currency symbol here
   if (price) {
-    price = paddedPrice(price, 'kr');
+    price = paddedPrice(price, 'R$');
   }
   if (regularPrice) {
-    regularPrice = paddedPrice(regularPrice, 'kr');
+    regularPrice = paddedPrice(regularPrice, 'R$');
   }
   if (salePrice) {
-    salePrice = paddedPrice(salePrice, 'kr');
+    salePrice = paddedPrice(salePrice, 'R$');
   }
 
   // Strip out HTML from description
@@ -47,19 +47,19 @@ const SingleProduct = ({ product }: IProductRootObject) => {
     ).body.textContent;
   }
 
-  
+
 
   return (
     <section className="py-8 bg-white mb-12 sm:mb-2">
       {/* Show loading spinner while loading, and hide content while loading */}
       {isLoading ? (
         <div className="h-56 mt-20">
-          <p className="text-2xl font-bold text-center">Laster produto ...</p>
+          <p className="text-2xl font-bold text-center">Carregando produto ...</p>
           <br />
           <LoadingSpinner />
         </div>
       ) : (
-        <div className="container flex flex-wrap items-center pt-4 pb-12 mx-auto ">
+        <div className="max-w-screen-lg flex flex-wrap items-center pt-4 pb-12 mx-auto">
           <div className="grid grid-cols-1 gap-4 mt-16 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-2">
             {image && (
               <img
@@ -81,62 +81,23 @@ const SingleProduct = ({ product }: IProductRootObject) => {
               />
             )}
             <div className="ml-8">
-              <p className="text-3xl font-bold text-left">{name}</p>
+              <p className="text-3xl font-semibold text-left">{name}</p>
               <br />
               {/* Display sale price when on sale */}
               {onSale && (
-                <div className="flex">
-                  <p className="pt-1 mt-4 text-3xl text-gray-900">
+                <div>
+                  <p>A União Calçados garante a sua compra, do pedida à entrega</p>
+                  <p className="pt-1 mt-4 text-4xl text-gray-900 font-semibold">
                     {product.variations && filteredVariantPrice(price, '')}
-                    {!product.variations && salePrice}
+                    {!product.variations && salePrice} no PIX
                   </p>
-                  <p className="pt-1 pl-8 mt-4 text-2xl text-gray-900 line-through">
-                    {product.variations && filteredVariantPrice(price, 'right')}
-                    {!product.variations && regularPrice}
+                  <p className="pt-1 mt-4 text-2xl text-gray-700">
+                    Ou {product.variations && filteredVariantPrice(price, 'right')}
+                    {!product.variations && regularPrice} à prazo
                   </p>
                 </div>
               )}
-              {/* Display regular price when not on sale */}
-              {!onSale && (
-                <p className="pt-1 mt-4 text-2xl text-gray-900"> {price}</p>
-              )}
-              <br />
-              <p className="pt-1 mt-4 text-2xl text-gray-900">
-                {DESCRIPTION_WITHOUT_HTML}
-              </p>
-              {Boolean(product.stockQuantity) && (
-                <p
-                  v-if="data.product.stockQuantity"
-                  className="pt-1 mt-4 mb-4 text-2xl text-gray-900"
-                >
-                  {product.stockQuantity} på lager
-                </p>
-              )}
-              {product.variations && (
-                <p className="pt-1 mt-4 text-xl text-gray-900">
-                  <span className="py-2">Varianter</span>
-                  <select
-                    id="variant"
-                    name="variant"
-                    className="block w-80 px-6 py-2 bg-white border border-gray-500 rounded-lg focus:outline-none focus:shadow-outline"
-                    onChange={(e) => {
-                      setSelectedVariation(Number(e.target.value));
-                    }}
-                  >
-                    {product.variations.nodes.map(
-                      ({ id, name, databaseId, stockQuantity }) => {
-                        // Remove product name from variation name
-                        const filteredName = name.split('- ').pop();
-                        return (
-                          <option key={id} value={databaseId}>
-                            {filteredName} - ({stockQuantity} på lager)
-                          </option>
-                        );
-                      },
-                    )}
-                  </select>
-                </p>
-              )}
+
               <div className="pt-1 mt-2">
                 {
                   // Display default AddToCart button if we do not have variations.
@@ -152,6 +113,9 @@ const SingleProduct = ({ product }: IProductRootObject) => {
               </div>
             </div>
           </div>
+          {/* <p className="pt-1 mt-4 text-2xl text-gray-900">
+            {DESCRIPTION_WITHOUT_HTML}
+          </p> */}
         </div>
       )}
     </section>
