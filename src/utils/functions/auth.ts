@@ -8,12 +8,11 @@ interface LoginResponse {
 
 export const getToken = async (): Promise<string | null> => {
   try {
-    const response = await axios.post<LoginResponse>('http://caiodssilva.com.br:35000/api/v1/login', {
-      usuario: 'A',
-      senha: 'a',
-      loja: '00',
+    const response = await axios.post<LoginResponse>(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/login`, {
+      usuario: process.env.NEXT_PUBLIC_API_USER,
+      senha: process.env.NEXT_PUBLIC_API_PASSWORD,
+      loja: process.env.NEXT_PUBLIC_API_STORE,
     });
-
     const token = response.data.token;
 
     if (token) {
