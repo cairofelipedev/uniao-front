@@ -25,6 +25,10 @@ import {
 import { GET_CART } from '@/utils/gql/GQL_QUERIES';
 import { UPDATE_CART } from '@/utils/gql/GQL_MUTATIONS';
 
+// Icons 
+
+import { BiTrash } from "react-icons/bi";
+
 /**
  * Renders cart contents.
  * @function CartContents
@@ -104,72 +108,86 @@ const CartContents = () => {
 
   return (
     <>
-      <section className="py-8  mt-10">
-        <div className="container flex flex-wrap items-center mx-auto">
+      <section>
+        <div className="container flex flex-wrap items-center">
           {data?.cart?.contents?.nodes.length ? (
             data.cart.contents.nodes.map((item: IProductRootObject) => (
-              <div
-                className="bg-white container mx-auto mt-4 flex flex-wrap flex-row justify-around items-center content-center m-w-[1380px] border border-gray-300 rounded-lg shadow
-               "
-                key={item.key}
-              >
-                <div className="lg:m-2 xl:m-4 xl:w-1/6 lg:w-1/6 sm:m-2 w-auto flex space-x-2">
-                  <img src={item.product.node.image.sourceUrl}
-                    alt={item.product.node.name} className="w-20" />
-                  <div>
-                    <span className="block mt-2 font-extrabold">
-                      Nome: <br />
-                    </span>
-                    <span className="inline-block mt-4 w-20 h-12 md:w-full lg:w-full xl:w-full">
-                      {item.product.node.name}
-                    </span>
+              <div key={item.key} className='w-full'>
+                <div
+                  className="bg-white container mt-4 flex flex-wrap flex-row justify-between items-center content-center">
+                  <div className="w-auto flex space-x-2">
+                    <img src={item.product.node.image.sourceUrl}
+                      alt={item.product.node.name} className="w-20" />
+                    <div>
+                      <h6 className="font-semibold uppercase text-gray-600">  {item.product.node.name}</h6>
+                      <div className="xl:w-1/2 lg:w-1/2  w-auto">
+                        <span className="md:w-full lg:w-full xl:w-full flex items-center">
+                          X <input
+                            className="bg-gray-50  text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                            type="number"
+                            min="1"
+                            value={item.quantity}
+                            onChange={(event) => {
+                              handleQuantityChange(
+                                event,
+                                item.key,
+                                data.cart.contents.nodes,
+                                updateCart,
+                                updateCartProcessing,
+                              );
+                            }}
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lg:m-2 xl:m-4 sm:m-2 w-auto flex items-center">
+                    <span className="font-semibold text-gray-600 text-xl">{item.subtotal}</span>
+                    <div className="lg:m-2 xl:m-4 xl:w-1/6 lg:w-1/6 sm:m-2 w-auto">
+                      <span className="inline-block mt-4 w-20 h-12 md:w-full lg:w-full xl:w-full">
+                        <Button
+                          buttonDisabled={updateCartProcessing}
+                          handleButtonClick={() =>
+                            handleRemoveProductClick(
+                              item.key,
+                              data.cart.contents.nodes,
+                            )
+                          }
+                        >
+                          <BiTrash />
+                        </Button>
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <div className="lg:m-2 xl:m-4 xl:w-1/6 lg:w-1/6 sm:m-2 w-auto">
-                  <span className="block mt-2 font-extrabold">
-                    Quantidade: <br />
-                  </span>
-                  <span className="inline-block mt-4 w-20 h-12 md:w-full lg:w-full xl:w-full">
-                    <input
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                      type="number"
-                      min="1"
-                      value={item.quantity}
-                      onChange={(event) => {
-                        handleQuantityChange(
-                          event,
-                          item.key,
-                          data.cart.contents.nodes,
-                          updateCart,
-                          updateCartProcessing,
-                        );
-                      }}
-                    />
-                  </span>
+                <div class="mb-6 pb-6 border-b border-gray-200 text-gray-800">
+                  <div class="w-full flex mb-3 items-center">
+                    <div class="flex-grow">
+                      <span class="text-gray-600">Subtotal</span>
+                    </div>
+                    <div class="pl-3">
+                      <span class="font-semibold">$190.91</span>
+                    </div>
+                  </div>
+                  <div class="w-full flex items-center">
+                    <div class="flex-grow">
+                      <span class="text-gray-600">Taxes (GST)</span>
+                    </div>
+                    <div class="pl-3">
+                      <span class="font-semibold">$19.09</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="lg:m-2 xl:m-4 xl:w-1/6 lg:w-1/6 sm:m-2 w-auto">
-                  <span className="block mt-2 font-extrabold">
-                    Total: <br />
-                  </span>
-                  <span className="inline-block mt-4 w-20 h-12 md:w-full lg:w-full xl:w-full">
-                    {item.subtotal}
-                  </span>
-                </div>
-                <div className="lg:m-2 xl:m-4 xl:w-1/6 lg:w-1/6 sm:m-2 w-auto">
-                  <span className="inline-block mt-4 w-20 h-12 md:w-full lg:w-full xl:w-full">
-                    <Button
-                      color="red"
-                      buttonDisabled={updateCartProcessing}
-                      handleButtonClick={() =>
-                        handleRemoveProductClick(
-                          item.key,
-                          data.cart.contents.nodes,
-                        )
-                      }
-                    >
-                      Excluir
-                    </Button>
-                  </span>
+                <div class="mb-6 pb-6 border-b border-gray-200 md:border-none text-gray-800 text-xl">
+                  <div class="w-full flex items-center">
+                    <div class="flex-grow">
+                      <span class="text-gray-600">Total</span>
+                    </div>
+                    <div class="pl-3">
+                      <span class="font-semibold text-gray-400 text-sm">AUD</span> <span class="font-semibold">$210.00</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))
