@@ -109,10 +109,10 @@ const CartContents = () => {
   return (
     <>
       <section>
-        <div className="container flex flex-wrap items-center">
+        <div className="container flex flex-wrap items-center border border-gray-200 rounded-lg bg-white">
           {data?.cart?.contents?.nodes.length ? (
             data.cart.contents.nodes.map((item: IProductRootObject) => (
-              <div key={item.key} className='w-full'>
+              <div key={item.key} className='w-full mx-4'>
                 <div
                   className="bg-white container mt-4 flex flex-wrap flex-row justify-between items-center content-center">
                   <div className="w-auto flex space-x-2">
@@ -161,23 +161,23 @@ const CartContents = () => {
                     </div>
                   </div>
                 </div>
-                <div class="mb-6 pb-6 border-b border-gray-200 text-gray-800">
-                  <div class="w-full flex mb-3 items-center">
-                    <div class="flex-grow">
-                      <span class="text-gray-600">Subtotal</span>
+                <div className="mb-6 pb-6 border-b border-gray-200 text-gray-800">
+                  <div className="w-full flex mb-3 items-center">
+                    <div className="flex-grow">
+                      <span className="text-gray-600">Subtotal</span>
                     </div>
-                    <div class="pl-3">
-                      <span class="font-semibold">{item.subtotal}</span>
+                    <div className="pl-3">
+                      <span className="font-semibold">{item.subtotal}</span>
                     </div>
                   </div>
                 </div>
-                <div class="mb-6 pb-6 border-b border-gray-200 md:border-none text-gray-800 text-xl">
-                  <div class="w-full flex items-center">
-                    <div class="flex-grow">
-                      <span class="text-gray-600">Total</span>
+                <div className="mb-6 pb-6 border-b border-gray-200 md:border-none text-gray-800 text-xl">
+                  <div className="w-full flex items-center">
+                    <div className="flex-grow">
+                      <span className="text-gray-600">Total</span>
                     </div>
-                    <div class="pl-3">
-                      <span class="font-semibold">{item.subtotal}</span>
+                    <div className="pl-3">
+                      <span className="font-semibold">{item.subtotal}</span>
                     </div>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ const CartContents = () => {
             </div>
           )}
           {!isCheckoutPage && data?.cart?.contents?.nodes.length ? (
-            <div className="mt-4 mx-auto">
+            <div className="mt-4 mx-auto mb-4">
               <Link href="/finalizar-pedido" passHref>
                 <Button>IR PARA PAGAMENTO</Button>
               </Link>

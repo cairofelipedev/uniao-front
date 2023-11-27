@@ -16,14 +16,13 @@ interface IHeaderProps {
 const Header = ({ title }: IHeaderProps) => (
   <>
     <Head>
-      <title>UNIÃO CALÇADOS - ECOMMERCE {title}</title>
-      <meta name="description" content="WooCommerce webshop" />
-      <meta name="keywords" content="Ecommerce, WooCommerce" />
-      <meta
-        property="og:title"
-        content="Nextjs Ecommerce with Woocommerce"
-        key="pagetitle"
-      />
+      <title>União Calçados - {title}</title>
+      <link rel="icon" href="/icon.png" />
+      <meta name="description" content="União Calçados" />
+      <meta name="keywords" content="Calçados, Esporte, Moda, Roupa" />
+      <meta property="og:title" content="União Calçados" />
+      <meta property="og:url" content="" />
+      <meta property="og:image" content="" />
     </Head>
     <Navbar />
   </>

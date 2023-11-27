@@ -37,7 +37,7 @@ export const InputField = ({
 
   return (
     <div className="w-1/2 p-2">
-      <label htmlFor={inputName} class="text-gray-600 font-semibold text-sm mb-2 ml-1">{inputLabel}</label>
+      <label htmlFor={inputName} className="text-gray-600 font-semibold text-sm mb-2 ml-1">{inputLabel}</label>
       <input
         className="w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
         id={inputName}

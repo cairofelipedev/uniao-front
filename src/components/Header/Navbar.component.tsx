@@ -18,21 +18,21 @@ const Navbar = () => {
     <>
       <nav className="sm:flex sm:justify-between sm:items-center bg-gray-800 py-2 px-20">
         <div className="flex text-white">
-          <div class="flex space-x-5">
-            <div class="text-sm">
+          <div className="flex space-x-5">
+            <div className="text-sm">
               Troque na loja ou no site
             </div>
-            <div class="text-sm">
+            <div className="text-sm">
               Compre pelo WhatsApp
             </div>
           </div>
         </div>
         <div className="flex text-white">
-          <div class="flex space-x-5">
-            <div class="text-sm">
+          <div className="flex space-x-5">
+            <div className="text-sm">
               Troque na loja ou no site
             </div>
-            <div class="text-sm">
+            <div className="text-sm">
               Compre pelo WhatsApp
             </div>
           </div>
