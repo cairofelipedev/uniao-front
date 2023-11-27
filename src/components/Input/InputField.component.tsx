@@ -5,7 +5,7 @@ interface ICustomValidation {
   minlength?: number;
 }
 
-interface IErrors {}
+interface IErrors { }
 
 export interface IInputRootObject {
   inputLabel: string;
@@ -37,11 +37,9 @@ export const InputField = ({
 
   return (
     <div className="w-1/2 p-2">
-      <label htmlFor={inputName} className="pb-4">
-        {inputLabel}
-      </label>
+      <label htmlFor={inputName} class="text-gray-600 font-semibold text-sm mb-2 ml-1">{inputLabel}</label>
       <input
-        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        className="w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
         id={inputName}
         placeholder={inputLabel}
         type={type ?? 'text'}

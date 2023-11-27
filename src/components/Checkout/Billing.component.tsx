@@ -96,15 +96,9 @@ const Billing = ({ handleFormSubmit }: IBillingProps) => {
             </div>
           </div>
         </div>
-        <div>
-          <h1>Verificar CPF</h1>
-          <input type="text" placeholder="CPF" value={cpf} onChange={(e) => setCpf(e.target.value)} />
-          <button onClick={handleCheckCPF}>OK</button>
-          {nome && <p>Nome: {nome}</p>}
-        </div>
         {cpfVerified && (
           <form onSubmit={methods.handleSubmit(handleFormSubmit)}>
-            <div className="mx-auto lg:w-1/2 flex flex-wrap">
+            <div className="mx-auto flex flex-wrap">
               {INPUT_FIELDS.map(({ id, label, name, customValidation }) => (
                 <InputField
                   key={id}

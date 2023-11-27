@@ -167,15 +167,7 @@ const CartContents = () => {
                       <span class="text-gray-600">Subtotal</span>
                     </div>
                     <div class="pl-3">
-                      <span class="font-semibold">$190.91</span>
-                    </div>
-                  </div>
-                  <div class="w-full flex items-center">
-                    <div class="flex-grow">
-                      <span class="text-gray-600">Taxes (GST)</span>
-                    </div>
-                    <div class="pl-3">
-                      <span class="font-semibold">$19.09</span>
+                      <span class="font-semibold">{item.subtotal}</span>
                     </div>
                   </div>
                 </div>
@@ -185,7 +177,7 @@ const CartContents = () => {
                       <span class="text-gray-600">Total</span>
                     </div>
                     <div class="pl-3">
-                      <span class="font-semibold text-gray-400 text-sm">AUD</span> <span class="font-semibold">$210.00</span>
+                      <span class="font-semibold">{item.subtotal}</span>
                     </div>
                   </div>
                 </div>

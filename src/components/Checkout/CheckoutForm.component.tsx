@@ -130,18 +130,12 @@ const CheckoutForm = () => {
               <div class="-mx-3 md:flex items-start">
                 <div class="px-3 md:w-7/12 lg:pr-10">
                   <CartContents />
-
                 </div>
                 <div class="px-3 md:w-5/12">
                   <Billing handleFormSubmit={handleFormSubmit} />
                   <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 text-gray-800 font-light mb-6">
                     <div class="w-full p-3 border-b border-gray-200">
-                      <div class="mb-5">
-                        <label for="type1" class="flex items-center cursor-pointer">
-                          <input type="radio" class="form-radio h-5 w-5 text-indigo-500" name="type" id="type1" checked />
-                          <img src="https://leadershipmemphis.org/wp-content/uploads/2020/08/780370.png" class="h-6 ml-3" />
-                        </label>
-                      </div>
+
                       <div>
                         <div class="mb-3">
                           <label class="text-gray-600 font-semibold text-sm mb-2 ml-1">Name on card</label>
@@ -202,6 +196,12 @@ const CheckoutForm = () => {
                       <label for="type2" class="flex items-center cursor-pointer">
                         <input type="radio" class="form-radio h-5 w-5 text-indigo-500" name="type" id="type2" />
                         <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" width="80" class="ml-3" />
+                      </label>
+                    </div>
+                    <div class="w-full p-3">
+                      <label for="type1" class="flex items-center cursor-pointer">
+                        <input type="radio" class="form-radio h-5 w-5 text-indigo-500" name="type" id="type1" checked />
+                        <img src="https://leadershipmemphis.org/wp-content/uploads/2020/08/780370.png" class="h-6 ml-3" />
                       </label>
                     </div>
                   </div>
