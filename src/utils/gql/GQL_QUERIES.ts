@@ -157,57 +157,12 @@ export const FETCH_ALL_CATEGORIES_QUERY = gql`
 `;
 
 export const GET_PRODUCTS_FROM_CATEGORY = gql`
-  query ProductsFromCategory($id: ID!) {
-    productCategory(id: $id) {
-      id
-      name
-      products(first: 50) {
-        nodes {
-          id
-          databaseId
-          onSale
-          averageRating
-          slug
-          description
-          image {
-            id
-            uri
-            title
-            srcSet
-            sourceUrl
-          }
-          name
-          ... on SimpleProduct {
-            salePrice
-            regularPrice
-            onSale
-            price
-            id
-          }
-          ... on VariableProduct {
-            salePrice
-            regularPrice
-            onSale
-            price
-            id
-          }
-          ... on ExternalProduct {
-            price
-            id
-            externalUrl
-          }
-          ... on GroupProduct {
-            products {
-              nodes {
-                ... on SimpleProduct {
-                  id
-                  price
-                }
-              }
-            }
-            id
-          }
-        }
+  query ProductsFromCategory($category: String!) {
+    products(where: {category: $category}) {
+      nodes {
+        id
+        name
+        description
       }
     }
   }
