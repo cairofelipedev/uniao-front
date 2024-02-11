@@ -168,6 +168,18 @@ export const GET_PRODUCTS_FROM_CATEGORY = gql`
   }
 `;
 
+export const GET_PRODUCTS_FROM_SEARCH = gql`
+  query ProductsFromSearch($search: String!) {
+    products(where: {search: $search}) {
+      nodes {
+        id
+        name
+        description
+      }
+    }
+  }
+`;
+
 export const GET_CART = gql`
   query GET_CART {
     cart {
