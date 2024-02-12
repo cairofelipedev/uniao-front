@@ -180,6 +180,19 @@ export const GET_PRODUCTS_FROM_SEARCH = gql`
   }
 `;
 
+export const GET_PRODUCTS_FROM_SKU = gql`
+  query ProductsFromSKU($sku: String!) {
+    products(where: {sku: $sku}) {
+      nodes {
+        id
+        name
+        description
+        # Outros campos que deseje recuperar
+      }
+    }
+  }
+`;
+
 export const GET_CART = gql`
   query GET_CART {
     cart {
