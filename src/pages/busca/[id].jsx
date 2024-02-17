@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/client';
 import { GET_PRODUCTS_FROM_SEARCH, GET_PRODUCTS_FROM_SKU } from '@/utils/gql/GQL_QUERIES';
 import client from '@/utils/apollo/ApolloClient'; // Importe o cliente Apollo
+import Layout from '@/components/Layout/Layout.component';
 
 const Search = () => {
   const router = useRouter();
@@ -30,17 +31,23 @@ const Search = () => {
   const products = [...searchProducts, ...skuProducts];
 
   return (
-    <div>
+    <Layout title="Busca">
       <h1>Resultados da pesquisa para "{id}" e SKU "{id}"</h1>
       <ul>
         {products.map(product => (
           <li key={product.id}>
             <h2>{product.name}</h2>
             <p>{product.description}</p>
+            <img
+              id="product-image"
+              className="w-full"
+              alt={product.name}
+              src={product.image.sourceUrl}
+            />
           </li>
         ))}
       </ul>
-    </div>
+    </Layout>
   );
 };
 

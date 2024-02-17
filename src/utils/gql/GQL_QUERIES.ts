@@ -175,6 +175,9 @@ export const GET_PRODUCTS_FROM_SEARCH = gql`
         id
         name
         description
+        image {
+          sourceUrl
+        }
       }
     }
   }
@@ -187,7 +190,9 @@ export const GET_PRODUCTS_FROM_SKU = gql`
         id
         name
         description
-        # Outros campos que deseje recuperar
+        image {
+          sourceUrl
+        }
       }
     }
   }
