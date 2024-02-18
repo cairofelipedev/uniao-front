@@ -11,8 +11,7 @@ const Categories = ({ categories }: ICategoriesProps) => (
       {categories.map(({ id, name, slug }) => (
         <Link
           key={uuidv4()}
-          as={`/kategori/${slug}?id=${id}`}
-          href="/kategori/[id]"
+          href={`/categoria/${slug}`}
           passHref
         >
           <div className="p-6 cursor-pointer">
