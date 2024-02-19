@@ -11,7 +11,7 @@ export default class HomeBanners extends Component {
       centerPadding: "160px",
       slidesToShow: 1,
       speed: 500,
-      arrows: true,
+      arrows: false,
       dots: false,
       responsive: [
         {

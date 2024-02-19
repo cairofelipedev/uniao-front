@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { GrChat } from "react-icons/gr";
 
 // Components
 import Cart from './Cart.component';
@@ -18,35 +19,26 @@ const Navbar = () => {
   const router = useRouter();
   const isMobile = useIsMobile();
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (searchTerm.trim() !== '') {
       router.push(`/busca/${encodeURIComponent(searchTerm)}`);
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
 
   return (
     <>
-      <nav className="sm:flex sm:justify-between sm:items-center bg-gray-800 py-2 px-20">
-        <div className="flex text-white">
-          <div className="flex space-x-5">
-            <div className="text-sm">Troque na loja ou no site</div>
-            <div className="text-sm">Compre pelo WhatsApp</div>
-          </div>
-        </div>
-        <div className="flex text-white">
-          <div className="flex space-x-5">
-            <div className="text-sm">Troque na loja ou no site</div>
-            <div className="text-sm">Compre pelo WhatsApp</div>
-          </div>
+      <nav className="bg-green-600 py-1.5">
+        <div className="text-white text-center">
+          <div className="text-sm">Pague no PIX e ganhe 5% de desconto</div>
         </div>
       </nav>
       <header className="hidden lg:block shadow-lg bg-white">
-        <div className="mx-auto px-20 py-4">
+        <div className="mx-auto max-w-screen-xl py-4">
           <div className="flex items-center">
             <div className="hidden md:flex-none md:w-32 md:flex md:items-center">
               <div>
@@ -57,7 +49,7 @@ const Navbar = () => {
             </div>
             <form onSubmit={handleSearch} className="relative col-span-4 grow">
               <input
-                className="w-full border shadow rounded-lg pl-5 ml-5 py-4 focus:border-blue-500 focus:outline-none focus:shadow-outline"
+                className="w-full rounded-full pl-5 ml-5 py-4 focus:border-green-500 focus:outline-none focus:shadow-outline bg-slate-100"
                 type="text"
                 placeholder="Busque aqui seu produto"
                 value={searchTerm}
@@ -76,6 +68,7 @@ const Navbar = () => {
               </button>
             </form>
             <div className="flex items-center justify-end w-full col-span-1 md:flex-none md:w-32">
+              <div className="flex items-center"><GrChat /></div>
               <div className="flex items-center">{!isMobile && <Cart />}</div>
               <div className="flex sm:hidden">
                 <button type="button" className="text-gray-600 hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-label="toggle menu">

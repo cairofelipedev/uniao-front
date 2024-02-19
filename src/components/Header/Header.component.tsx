@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import Navbar from './Navbar';
+import Navbar from './Navbar.component';
 
 interface IHeaderProps {
   title: string;

@@ -32,7 +32,7 @@ const Search = () => {
 
   return (
     <Layout title="Busca">
-      <h1>Resultados da pesquisa para "{id}" e SKU "{id}"</h1>
+      <h1>Resultados da pesquisa para {id} e SKU {id}</h1>
       <ul>
         {products.map(product => (
           <li key={product.id}>

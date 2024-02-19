@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { filteredVariantPrice, paddedPrice } from '@/utils/functions/functions';
 
+import Slider from "react-slick";
+
 interface Image {
   __typename: string;
   sourceUrl?: string;
@@ -46,43 +48,49 @@ interface IDisplayProductsProps {
  * @returns {JSX.Element} - Rendered component
  */
 
+const settings = {
+  dots: true,
+  arrows: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 2
+};
+
 const DisplayProducts = ({ products }: IDisplayProductsProps) => (
   <section className="container mx-auto">
-    <div id="product-container" className="grid lg:grid-cols-4 grid-cols-2 p-2">
-      {products ? (
-        products.map(
-          ({
-            databaseId,
-            name,
-            price,
-            regularPrice,
-            salePrice,
-            onSale,
-            slug,
-            image,
-            variations,
-          }) => {
-            // Add padding/empty character after currency symbol here
-            if (price) {
-              price = paddedPrice(price, 'R$');
-            }
-            if (regularPrice) {
-              regularPrice = paddedPrice(regularPrice, 'R$');
-            }
-            if (salePrice) {
-              salePrice = paddedPrice(salePrice, 'R$');
-            }
+    <div id="product-container">
+      <Slider {...settings}>
+        {products ? (
+          products.map(
+            ({
+              databaseId,
+              name,
+              price,
+              regularPrice,
+              salePrice,
+              onSale,
+              slug,
+              image,
+              variations,
+            }) => {
+              // Add padding/empty character after currency symbol here
+              if (price) {
+                price = paddedPrice(price, 'R$');
+              }
+              if (regularPrice) {
+                regularPrice = paddedPrice(regularPrice, 'R$');
+              }
+              if (salePrice) {
+                salePrice = paddedPrice(salePrice, 'R$');
+              }
 
-            return (
-              <div
-                key={uuidv4()}
-                className="flex flex-col lg:p-4 p-1"
-              >
-                <Link
-                  href={`/produto/${encodeURIComponent(
-                    slug,
-                  )}?id=${encodeURIComponent(databaseId)}`}
+              return (
+                <div
+                  key={uuidv4()}
+                  className="flex flex-col lg:p-4 p-1"
                 >
+
                   <div className="mx-auto mt-10 w-full transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg">
                     <span>
                       {image ? (
@@ -103,39 +111,45 @@ const DisplayProducts = ({ products }: IDisplayProductsProps) => (
                         />
                       )}
                     </span>
-                    <div className="p-4">
-                      <h2 className="mb-2 text-lg font-medium  text-gray-900">{name}</h2>
-                      {onSale && (
-                        <div className="flex items-center">
-                          <p className="mr-2 text-lg font-semibold text-gray-900">
-                            {variations && filteredVariantPrice(price, '')}
-                            {!variations && salePrice}
-                          </p>
-                          <p className="text-base  font-medium text-gray-500 line-through">
-                            {variations && filteredVariantPrice(price, 'right')}
-                            {!variations && regularPrice}
-                          </p>
-                          {/* <p className="ml-auto text-base font-medium text-green-500">20% off</p> */}
-                        </div>
-                      )}
-                      {/* Display regular price when not on sale */}
-                      {!onSale && (
-                        <p className="pt-1 text-center text-gray-900">{price}</p>
-                      )}
-                    </div>
+                    <Link
+                      href={`/produto/${encodeURIComponent(
+                        slug,
+                      )}?id=${encodeURIComponent(databaseId)}`}
+                    >
+                      <div className="p-4">
+                        <h2 className="mb-2 text-lg font-medium  text-gray-900">{name}</h2>
+                        {onSale && (
+                          <div className="flex items-center">
+                            <p className="mr-2 text-lg font-semibold text-gray-900">
+                              {variations && filteredVariantPrice(price, '')}
+                              {!variations && salePrice}
+                            </p>
+                            <p className="text-base  font-medium text-gray-500 line-through">
+                              {variations && filteredVariantPrice(price, 'right')}
+                              {!variations && regularPrice}
+                            </p>
+                            {/* <p className="ml-auto text-base font-medium text-green-500">20% off</p> */}
+                          </div>
+                        )}
+                        {/* Display regular price when not on sale */}
+                        {!onSale && (
+                          <p className="pt-1 text-center text-gray-900">{price}</p>
+                        )}
+                      </div>
+                    </Link>
                   </div>
-                </Link>
-              </div>
-            );
-          },
-        )
-      ) : (
-        <div className="mx-auto text-xl font-bold text-center text-gray-800 no-underline uppercase">
-          Produto sem Imagem
-        </div>
-      )}
-    </div>
-  </section>
+                </div>
+              );
+            },
+          )
+        ) : (
+          <div className="mx-auto text-xl font-bold text-center text-gray-800 no-underline uppercase">
+            Produto sem Imagem
+          </div>
+        )}
+      </Slider>
+    </div >
+  </section >
 );
 
 export default DisplayProducts;
