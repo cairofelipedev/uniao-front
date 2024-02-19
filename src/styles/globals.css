@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: rgb(246, 246, 246);
+  /* background-color: rgb(246, 246, 246); */
 }
 
 #cart-div {
