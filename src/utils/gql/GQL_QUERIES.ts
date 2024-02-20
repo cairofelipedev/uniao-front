@@ -160,9 +160,32 @@ export const GET_PRODUCTS_FROM_CATEGORY = gql`
   query ProductsFromCategory($category: String!) {
     products(where: {category: $category}) {
       nodes {
-        id
+        databaseId
         name
-        description
+        onSale
+        slug
+        image {
+          sourceUrl
+        }
+        ... on SimpleProduct {
+          databaseId
+          price
+          regularPrice
+          salePrice
+        }
+        ... on VariableProduct {
+          databaseId
+          price
+          regularPrice
+          salePrice
+          variations {
+            nodes {
+              price
+              regularPrice
+              salePrice
+            }
+          }
+        }
       }
     }
   }
@@ -172,11 +195,31 @@ export const GET_PRODUCTS_FROM_SEARCH = gql`
   query ProductsFromSearch($search: String!) {
     products(where: {search: $search}) {
       nodes {
-        id
+        databaseId
         name
-        description
+        onSale
+        slug
         image {
           sourceUrl
+        }
+        ... on SimpleProduct {
+          databaseId
+          price
+          regularPrice
+          salePrice
+        }
+        ... on VariableProduct {
+          databaseId
+          price
+          regularPrice
+          salePrice
+          variations {
+            nodes {
+              price
+              regularPrice
+              salePrice
+            }
+          }
         }
       }
     }
@@ -187,11 +230,31 @@ export const GET_PRODUCTS_FROM_SKU = gql`
   query ProductsFromSKU($sku: String!) {
     products(where: {sku: $sku}) {
       nodes {
-        id
+        databaseId
         name
-        description
+        onSale
+        slug
         image {
           sourceUrl
+        }
+        ... on SimpleProduct {
+          databaseId
+          price
+          regularPrice
+          salePrice
+        }
+        ... on VariableProduct {
+          databaseId
+          price
+          regularPrice
+          salePrice
+          variations {
+            nodes {
+              price
+              regularPrice
+              salePrice
+            }
+          }
         }
       }
     }

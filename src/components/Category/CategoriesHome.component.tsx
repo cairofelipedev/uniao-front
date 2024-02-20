@@ -14,7 +14,7 @@ const Categories = () => (
         </div>
       </Link>
       <Link
-        href={`/categoria/`}
+        href={`/categoria/bolsas`}
         passHref
       >
         <div className="p-6 cursor-pointer">
