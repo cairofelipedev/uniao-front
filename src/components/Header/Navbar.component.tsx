@@ -82,22 +82,22 @@ const Navbar = () => {
         </div>
         <nav className="sm:flex sm:justify-center sm:items-center bg-green-600 py-2">
           <div className="flex flex-col sm:flex-row">
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
-              Calçados
+            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/chuteiras`}>
+              Chuteiras
             </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
-              Bosas
+            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/bolsas`}>
+              Bolsas
             </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
+            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/carteiras`}>
               Carteiras
             </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
-              Crianças
+            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/kids`}>
+              Kids
             </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
-              Acessórios
+            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/mochilas`}>
+              Mochilas
             </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
+            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/futebol`}>
               Futebol
             </a>
           </div>
