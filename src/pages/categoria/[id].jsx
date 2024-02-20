@@ -6,6 +6,7 @@ import { GET_PRODUCTS_FROM_CATEGORY } from '@/utils/gql/GQL_QUERIES';
 import client from '@/utils/apollo/ApolloClient'; // Importe o cliente Apollo
 import Layout from '@/components/Layout/Layout.component';
 import Link from 'next/link';
+import { filteredVariantPrice } from '@/utils/functions/functions';
 
 const Categoria = () => {
   const router = useRouter();

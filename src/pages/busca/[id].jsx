@@ -6,6 +6,7 @@ import { GET_PRODUCTS_FROM_SEARCH, GET_PRODUCTS_FROM_SKU } from '@/utils/gql/GQL
 import client from '@/utils/apollo/ApolloClient'; // Importe o cliente Apollo
 import Layout from '@/components/Layout/Layout.component';
 import Link from 'next/link';
+import { filteredVariantPrice } from '@/utils/functions/functions';
 
 const Search = () => {
   const router = useRouter();
