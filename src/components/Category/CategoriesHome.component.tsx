@@ -2,42 +2,64 @@ import Link from 'next/link';
 
 
 const Categories = () => (
-    <section className="container mx-auto bg-white">
-        <div className="grid gap-2 px-2 pt-2 pb-2 lg:px-0 xl:px-0 md:px-0 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 xs:grid-cols-3 grid-cols-2">
-            <Link
-                href={`/categoria/`}
-                passHref
-            >
-                <div className="p-6 cursor-pointer">
-                    <img src="/images/Prancheta_14.webp" className="lg:h-80 lg:w-80 lg:rounded-full" />
-                </div>
-            </Link>
-            <Link
-                href={`/categoria/`}
-                passHref
-            >
-                <div className="p-6 cursor-pointer">
-                    <img src="/images/Prancheta_2.webp" className="lg:h-80 lg:w-80 lg:rounded-full" />
-                </div>
-            </Link>
-            <Link
-                href={`/categoria/`}
-                passHref
-            >
-                <div className="p-6 cursor-pointer">
-                    <img src="/images/Prancheta_7.webp" className="lg:h-80 lg:w-80 lg:rounded-full" />
-                </div>
-            </Link>
-            <Link
-                href={`/categoria/`}
-                passHref
-            >
-                <div className="p-6 cursor-pointer">
-                    <img src="/images/Prancheta_8.webp" className="lg:h-80 lg:w-80 lg:rounded-full" />
-                </div>
-            </Link>
+  <section className="mx-auto max-w-screen-xl bg-white">
+    <div className="grid gap-2 px-2 pt-2 pb-2 lg:px-0 xl:px-0 md:px-0 lg:grid-cols-6 sm:grid-cols-2 md:grid-cols-3 xs:grid-cols-3 grid-cols-2">
+      <Link
+        href={`/categoria/`}
+        passHref
+      >
+        <div className="p-6 cursor-pointer">
+          <img src="/images/categoria1.png" className="lg:h-40 lg:w-40 w-32 h-32 rounded-full" />
+          <p className="text-center">Chuteiras</p>
         </div>
-    </section>
+      </Link>
+      <Link
+        href={`/categoria/`}
+        passHref
+      >
+        <div className="p-6 cursor-pointer">
+          <img src="/images/bolsas.png" className="lg:h-40 lg:w-40 w-32 h-32 rounded-full" />
+          <p className="text-center">Bolsas</p>
+        </div>
+      </Link>
+      <Link
+        href={`/categoria/`}
+        passHref
+      >
+        <div className="p-6 cursor-pointer">
+          <img src="/images/chinelos.png" className="lg:h-40 lg:w-40 w-32 h-32 rounded-full" />
+          <p className="text-center">Chinelos</p>
+        </div>
+      </Link>
+      <Link
+        href={`/categoria/`}
+        passHref
+      >
+        <div className="p-6 cursor-pointer">
+          <img src="/images/tenis.png" className="lg:h-40 lg:w-40 w-32 h-32 rounded-full" />
+          <p className="text-center">Tênis</p>
+        </div>
+      </Link>
+      <Link
+        href={`/categoria/`}
+        passHref
+      >
+        <div className="p-6 cursor-pointer">
+          <img src="/images/sandalias.png" className="lg:h-40 lg:w-40 w-32 h-32 rounded-full" />
+          <p className="text-center">Sandálias</p>
+        </div>
+      </Link>
+      <Link
+        href={`/categoria/`}
+        passHref
+      >
+        <div className="p-6 cursor-pointer">
+          <img src="/images/rasteiras.png" className="lg:h-40 lg:w-40 w-32 h-32 rounded-full" />
+          <p className="text-center">Rasteiras</p>
+        </div>
+      </Link>
+    </div>
+  </section>
 );
 
 export default Categories;

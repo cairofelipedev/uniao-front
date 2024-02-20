@@ -1,10 +1,12 @@
 /*eslint complexity: ["error", 20]*/
 import Link from 'next/link';
 import { v4 as uuidv4 } from 'uuid';
-
+import React from 'react';
 import { filteredVariantPrice, paddedPrice } from '@/utils/functions/functions';
 
 import Slider from "react-slick";
+import { TfiArrowCircleLeft, TfiArrowCircleRight } from "react-icons/tfi";
+
 
 interface Image {
   __typename: string;
@@ -40,6 +42,12 @@ interface IDisplayProductsProps {
   products: RootObject[];
 }
 
+interface CustomArrowProps {
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
+}
+
 /**
  * Displays all of the products as long as length is defined.
  * Does a map() over the props array and utilizes uuidv4 for unique key values.
@@ -50,11 +58,13 @@ interface IDisplayProductsProps {
 
 const settings = {
   dots: true,
-  arrows: false,
+  arrows: true,
   infinite: true,
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 2,
+  nextArrow: <CustomNextArrow />,
+  prevArrow: <CustomPrevArrow />,
   responsive: [
     {
       breakpoint: 1024,
@@ -77,6 +87,7 @@ const settings = {
       breakpoint: 480,
       settings: {
         className: "center",
+        arrows: false,
         centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1
@@ -85,8 +96,30 @@ const settings = {
   ]
 };
 
+function CustomNextArrow(props: CustomArrowProps) {
+  const { className, style, onClick } = props;
+  return (
+    <TfiArrowCircleRight
+      className={className}
+      style={{ ...style, display: "block", color: "green" }}
+      onClick={(onClick as unknown) as React.MouseEventHandler<SVGElement>}
+    />
+  );
+}
+
+function CustomPrevArrow(props: CustomArrowProps) {
+  const { className, style, onClick } = props;
+  return (
+    <TfiArrowCircleLeft
+      className={className}
+      style={{ ...style, display: "block", color: "green" }}
+      onClick={(onClick as unknown) as React.MouseEventHandler<SVGElement>}
+    />
+  );
+}
+
 const DisplayProducts = ({ products }: IDisplayProductsProps) => (
-  <section className="container mx-auto">
+  <section className="mx-auto max-w-screen-xl">
     <div id="product-container">
       <Slider {...settings}>
         {products ? (

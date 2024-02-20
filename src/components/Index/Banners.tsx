@@ -12,7 +12,7 @@ export default class HomeBanners extends Component {
       slidesToShow: 1,
       speed: 500,
       arrows: false,
-      dots: false,
+      dots: true,
       responsive: [
         {
           breakpoint: 480,
@@ -26,19 +26,13 @@ export default class HomeBanners extends Component {
     };
     return (
       <>
-        <div className="lg:mx-20 pt-6">
+        <div className="lg:mx-20 pt-12">
           <Slider {...settings}>
             <div className="px-3">
-              <Image src="/images/banner.webp" alt="Vercel Logo" width={1920} height={640} layout="responsive" className="rounded-xl border-2" />
+              <Image src="/images/banner2.webp" alt="Vercel Logo" width={1920} height={640} layout="fixed" className="rounded-xl border-1 lg:h-80 h-36" />
             </div>
             <div className="px-3">
-              <Image src="/images/banner.webp" alt="Vercel Logo" width={1920} height={640} layout="responsive" className="rounded-xl border-2" />
-            </div>
-            <div className="px-3">
-              <Image src="/images/banner.webp" alt="Vercel Logo" width={1920} height={640} layout="responsive" className="rounded-xl border-2" />
-            </div>
-            <div className="px-3">
-              <Image src="/images/banner.webp" alt="Vercel Logo" width={1920} height={640} layout="responsive" className="rounded-xl border-2" />
+              <Image src="/images/banner1.webp" alt="Vercel Logo" width={1920} height={640} layout="fixed" className="rounded-xl border-1 lg:h-80 h-36" />
             </div>
           </Slider>
         </div>
