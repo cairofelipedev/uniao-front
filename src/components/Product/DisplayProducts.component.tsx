@@ -87,6 +87,7 @@ const settings = {
       breakpoint: 480,
       settings: {
         className: "center",
+        dots: false,
         arrows: false,
         centerMode: true,
         slidesToShow: 1,
@@ -149,7 +150,7 @@ const DisplayProducts = ({ products }: IDisplayProductsProps) => (
               return (
                 <div
                   key={uuidv4()}
-                  className="flex flex-col lg:p-4 p-1"
+                  className="flex flex-col lg:p-4 p-1 px-5"
                 >
 
                   <div className="mx-auto mt-10 w-full transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg">
