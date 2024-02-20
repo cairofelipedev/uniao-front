@@ -5,7 +5,7 @@ const Categories = () => (
   <section className="mx-auto max-w-screen-xl bg-white">
     <div className="grid gap-2 px-2 pt-2 pb-2 lg:px-0 xl:px-0 md:px-0 lg:grid-cols-6 sm:grid-cols-2 md:grid-cols-3 xs:grid-cols-3 grid-cols-2">
       <Link
-        href={`/categoria/`}
+        href={`/categoria/chuteiras`}
         passHref
       >
         <div className="p-6 cursor-pointer">
@@ -23,7 +23,7 @@ const Categories = () => (
         </div>
       </Link>
       <Link
-        href={`/categoria/`}
+        href={`/categoria/chinelos`}
         passHref
       >
         <div className="p-6 cursor-pointer">
@@ -32,7 +32,7 @@ const Categories = () => (
         </div>
       </Link>
       <Link
-        href={`/categoria/`}
+        href={`/categoria/tenis`}
         passHref
       >
         <div className="p-6 cursor-pointer">
@@ -41,7 +41,7 @@ const Categories = () => (
         </div>
       </Link>
       <Link
-        href={`/categoria/`}
+        href={`/categoria/sandalias`}
         passHref
       >
         <div className="p-6 cursor-pointer">
@@ -50,7 +50,7 @@ const Categories = () => (
         </div>
       </Link>
       <Link
-        href={`/categoria/`}
+        href={`/categoria/rasteiras`}
         passHref
       >
         <div className="p-6 cursor-pointer">

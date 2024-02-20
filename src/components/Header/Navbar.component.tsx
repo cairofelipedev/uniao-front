@@ -47,7 +47,7 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <form onSubmit={handleSearch} className="relative col-span-4 grow">
+            <form onSubmit={handleSearch} className="relative col-span-4 grow px-3">
               <input
                 className="w-full rounded-full pl-5 ml-5 py-4 focus:border-green-500 focus:outline-none focus:shadow-outline bg-slate-100"
                 type="text"
@@ -67,8 +67,8 @@ const Navbar = () => {
                 </svg>
               </button>
             </form>
-            <div className="flex items-center justify-end w-full col-span-1 md:flex-none md:w-32">
-              <div className="flex items-center"><GrChat /></div>
+            <div className="flex items-center space-x-3 justify-end w-full col-span-1 md:flex-none md:w-32">
+              <div className="flex items-center"><GrChat className='text-red-500 h-6 w-6 mb-2'/></div>
               <div className="flex items-center">{!isMobile && <Cart />}</div>
               <div className="flex sm:hidden">
                 <button type="button" className="text-gray-600 hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-label="toggle menu">
@@ -83,31 +83,22 @@ const Navbar = () => {
         <nav className="sm:flex sm:justify-center sm:items-center bg-green-600 py-2">
           <div className="flex flex-col sm:flex-row">
             <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
-              Esportes
-            </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
-              Homens
-            </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
-              Mulheres
-            </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
-              Crianças
-            </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
               Calçados
             </a>
             <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
-              Roupas
+              Bosas
+            </a>
+            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
+              Carteiras
+            </a>
+            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
+              Crianças
             </a>
             <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
               Acessórios
             </a>
             <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
               Futebol
-            </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href="#">
-              Marcas
             </a>
           </div>
         </nav>

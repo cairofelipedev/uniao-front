@@ -26,7 +26,7 @@ export default class HomeBanners extends Component {
     };
     return (
       <>
-        <div className="lg:mx-20 pt-12">
+        <div className="lg:mx-20 pt-12 lg:pt-5">
           <Slider {...settings}>
             <div className="px-3">
               <Image src="/images/banner2.webp" alt="Vercel Logo" width={1920} height={640} layout="fixed" className="rounded-xl border-1 lg:h-80 h-36" />

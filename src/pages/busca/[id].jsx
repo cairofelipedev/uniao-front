@@ -35,7 +35,7 @@ const Search = () => {
   return (
     <Layout title="Busca">
       <div className="mx-auto max-w-screen-xl">
-        <h1>Resultados da pesquisa para {id}</h1>
+        <h1 className='text-xl mt-10 mb-10'>Resultados da pesquisa para {id}</h1>
         <div id="product-container" className="grid lg:grid-cols-4 grid-cols-2 p-2">
           {products.map(product => (
             <div key={product.id}>

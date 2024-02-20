@@ -8,25 +8,27 @@ import Layout from '@/components/Layout/Layout.component';
 import Link from 'next/link';
 import { filteredVariantPrice } from '@/utils/functions/functions';
 
-const Categoria = () => {
+const Search = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const { loading, error, data } = useQuery(GET_PRODUCTS_FROM_CATEGORY, {
+  // Consulta GraphQL para busca por termo
+  const { loading: loadingSearch, error: errorSearch, data: searchData } = useQuery(GET_PRODUCTS_FROM_CATEGORY, {
     client, // Utilize o cliente Apollo importado
-    variables: { category: id } // Passe o parâmetro da categoria para a consulta GraphQL
+    variables: { category: id } // Passe o parâmetro da pesquisa para a consulta GraphQL
   });
 
-  if (loading);
-  if (error) return <p>Ocorreu um erro ao carregar os produtos da categoria.</p>;
+  if (loadingSearch);
+  if (errorSearch) return <p>Ocorreu um erro ao carregar os produtos.</p>;
 
-  // Renderize os produtos da categoria com base nos dados recebidos
-  const products = data.products.nodes;
+  // Renderize os produtos com base nos dados recebidos
+  const searchProducts = searchData?.products.nodes || [];
+  const products = [...searchProducts];
 
   return (
     <Layout title="Busca">
       <div className="mx-auto max-w-screen-xl">
-        <h1>Categoria: {id}</h1>
+        <h1 className='text-xl mt-10 mb-10'>Categoria {id}</h1>
         <div id="product-container" className="grid lg:grid-cols-4 grid-cols-2 p-2">
           {products.map(product => (
             <div key={product.id}>
@@ -81,4 +83,4 @@ const Categoria = () => {
   );
 };
 
-export default Categoria;
+export default Search;
