@@ -83,22 +83,16 @@ const Navbar = () => {
         <nav className="sm:flex sm:justify-center sm:items-center bg-green-600 py-2">
           <div className="flex flex-col sm:flex-row">
             <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/chuteiras`}>
-              Chuteiras
+              Feminino
             </a>
             <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/bolsas`}>
-              Bolsas
+              Masculino
             </a>
             <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/carteiras`}>
-              Carteiras
+              Esportivo
             </a>
             <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/kids`}>
-              Kids
-            </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/mochilas`}>
-              Mochilas
-            </a>
-            <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/futebol`}>
-              Futebol
+              Infantil
             </a>
           </div>
         </nav>
