@@ -82,75 +82,142 @@ const Navbar = () => {
         </div>
         <nav className="sm:flex sm:justify-center sm:items-center bg-green-600 py-2">
           <div className="flex flex-col sm:flex-row">
-            <div class="group inline-block">
-              <button class="inline-flex items-center rounded px-4">
-                <span class="mr-1 text-white">FEMININO</span>
-                <svg class="h-4 w-4 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <div className="group inline-block">
+              <button className="inline-flex items-center rounded px-4">
+                <span className="mr-1 text-white">FEMININO</span>
+                <svg className="h-4 w-4 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                 </svg>
               </button>
-              <ul class="absolute left-2 z-10 hidden rounded pt-3 bg-white shadow-md shadow-gray-300 group-hover:block w-[99%]">
+              <ul className="absolute left-2 z-10 hidden rounded pt-3 bg-white shadow-md shadow-gray-300 group-hover:block w-[99%]">
+<div className='grid grid-cols-4'>
+<div>
                 <h1 className="px-10">CALÇADOS</h1>
-                <li class="px-2">
-                  <a href="https://corridafenae.apcefpi.com.br/">
-                    <button class="inline-flex items-center rounded py-2 px-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#E96708" class="bi bi-chevron-right font-bold" viewBox="0 0 16 16">
+                <li className="px-2">
+                  <a href="">
+                    <button className="inline-flex items-center rounded py-2 px-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                       </svg>
-                      <h1 class="ml-2 mr-5 text-xs text-gray-900">
+                      <h1 className="ml-2 mr-5 text-xs text-gray-900">
                         Tênis e sapatilhas
                       </h1>
                     </button>
                   </a>
                 </li>
-                <li class="px-2">
+                <li className="px-2">
                   <a href="">
-                    <button class="inline-flex items-center rounded py-2 px-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#E96708" class="bi bi-chevron-right font-bold" viewBox="0 0 16 16">
+                    <button className="inline-flex items-center rounded py-2 px-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                       </svg>
-                      <h1 class="ml-2 mr-5 text-xs text-gray-900">
+                      <h1 className="ml-2 mr-5 text-xs text-gray-900">
                         Sandálias
                       </h1>
                     </button>
                   </a>
                 </li>
-                <li class="px-2">
+                <li className="px-2">
                   <a href="">
-                    <button class="inline-flex items-center rounded py-2 px-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#E96708" class="bi bi-chevron-right font-bold" viewBox="0 0 16 16">
+                    <button className="inline-flex items-center rounded py-2 px-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                       </svg>
-                      <h1 class="ml-2 mr-5 text-xs text-gray-900">
+                      <h1 className="ml-2 mr-5 text-xs text-gray-900">
                         Tamancos
                       </h1>
                     </button>
                   </a>
                 </li>
-                <li class="px-2">
+                <li className="px-2">
                   <a href="">
-                    <button class="inline-flex items-center rounded py-2 px-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#E96708" class="bi bi-chevron-right font-bold" viewBox="0 0 16 16">
+                    <button className="inline-flex items-center rounded py-2 px-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                       </svg>
-                      <h1 class="ml-2 mr-5 text-xs text-gray-900">
+                      <h1 className="ml-2 mr-5 text-xs text-gray-900">
                         Rasteiras e papetes
                       </h1>
                     </button>
                   </a>
                 </li>
-                <li class="px-2">
+                <li className="px-2">
                   <a href="">
-                    <button class="inline-flex items-center rounded py-2 px-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#E96708" class="bi bi-chevron-right font-bold" viewBox="0 0 16 16">
+                    <button className="inline-flex items-center rounded py-2 px-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                       </svg>
-                      <h1 class="ml-2 mr-5 text-xs text-gray-900">
+                      <h1 className="ml-2 mr-5 text-xs text-gray-900">
                         Botas
                       </h1>
                     </button>
                   </a>
                 </li>
+</div>
+<div>
+                <h1 className="px-10">CALÇADOS</h1>
+                <li className="px-2">
+                  <a href="">
+                    <button className="inline-flex items-center rounded py-2 px-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" viewBox="0 0 16 16">
+                        <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                      <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                        Tênis e sapatilhas
+                      </h1>
+                    </button>
+                  </a>
+                </li>
+                <li className="px-2">
+                  <a href="">
+                    <button className="inline-flex items-center rounded py-2 px-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" viewBox="0 0 16 16">
+                        <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                      <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                        Sandálias
+                      </h1>
+                    </button>
+                  </a>
+                </li>
+                <li className="px-2">
+                  <a href="">
+                    <button className="inline-flex items-center rounded py-2 px-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" viewBox="0 0 16 16">
+                        <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                      <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                        Tamancos
+                      </h1>
+                    </button>
+                  </a>
+                </li>
+                <li className="px-2">
+                  <a href="">
+                    <button className="inline-flex items-center rounded py-2 px-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" viewBox="0 0 16 16">
+                        <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                      <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                        Rasteiras e papetes
+                      </h1>
+                    </button>
+                  </a>
+                </li>
+                <li className="px-2">
+                  <a href="">
+                    <button className="inline-flex items-center rounded py-2 px-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" viewBox="0 0 16 16">
+                        <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                      <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                        Botas
+                      </h1>
+                    </button>
+                  </a>
+                </li>
+</div>
+</div>
               </ul>
             </div>
             <a className="mt-3 text-white font-semibold hover:underline sm:mx-12 sm:mt-0" href={`/categoria/bolsas`}>
