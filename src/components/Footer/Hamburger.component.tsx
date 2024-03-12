@@ -4,10 +4,8 @@ import Link from 'next/link';
 import FadeLeftToRight from '@/components/Animations/FadeLeftToRight.component';
 import FadeLeftToRightItem from '@/components/Animations/FadeLeftToRightItem.component';
 
-const hamburgerLine =
-  'h-1 w-10 my-1 rounded-full bg-green-600 transition ease transform duration-300 not-sr-only';
-
-const opacityFull = 'opacity-100 group-hover:opacity-100';
+import { LiaBarsSolid } from "react-icons/lia";
+import { VscClose } from "react-icons/vsc";
 
 /**
  * Hamburger component used in mobile menu. Animates to a X when clicked
@@ -43,34 +41,15 @@ const Hamburger = () => {
   return (
     <div className="z-50 md:hidden lg:hidden xl:hidden">
       <button
-        className="flex flex-col w-16 rounded justify-center items-center group"
+        className="flex flex-col w-16 rounded items-center group"
         data-cy="hamburger"
         data-testid="hamburger"
         onClick={handleMobileMenuClick}
         aria-expanded={isExpanded}
         type="button"
       >
-        <span className="sr-only text-2xl">Hamburger</span>
-        <span
-          data-testid="hamburgerline"
-          className={`${hamburgerLine} ${
-            isExpanded
-              ? 'rotate-45 translate-y-3 opacity-100 group-hover:opacity-100'
-              : opacityFull
-          }`}
-        />
-        <span
-          className={`${hamburgerLine} ${
-            isExpanded ? 'opacity-0' : opacityFull
-          }`}
-        />
-        <span
-          className={`${hamburgerLine} ${
-            isExpanded
-              ? '-rotate-45 -translate-y-3 opacity-100 group-hover:opacity-100'
-              : opacityFull
-          }`}
-        />
+        <span className="sr-only text-white text-2xl">Hamburger</span>
+        {isExpanded ? <VscClose size={35} color='green' /> : <LiaBarsSolid size={35} color='green' />}
       </button>
       <FadeLeftToRight
         delay={0.2}
@@ -82,63 +61,41 @@ const Hamburger = () => {
           aria-hidden={!isExpanded}
           className={`absolute left-0 top-19 mt-2 z-10 w-full text-center text-black bg-white ${hidden}`}
         >
-          {/* <ul>
-            {LINKS.map(({ id, title, href }) => (
-              <FadeLeftToRightItem key={id} cssClass="block">
-                <li
-                  id="mobile-li"
-                  className="w-full p-4 border-t border-gray-400 border-solid rounded"
-                >
-                  <Link href={href} passHref>
-                    <span
-                      className="inline-block px-4 py-2 no-underline hover:text-black hover:underline"
-                      onClick={() => {
-                        setisExpanded((prevExpanded) => !prevExpanded);
-                      }}
-                    >
-                      {title}
-                    </span>
-                  </Link>
-                </li>
-              </FadeLeftToRightItem>
-            ))}
-          </ul> */}
-
-          <ul>
+          <ul className='bg-green-600 text-white'>
             <FadeLeftToRightItem cssClass="block">
-              <li id="mobile-li" className="w-full grid p-2">
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  <Link href="/" className="btn-bc hover:border-gray-400">
+              <li id="mobile-li" className="w-full p-2">
+                <div className="grid grid-cols-2 mb-4 mt-4">
+                  <Link href="/" className="uppercase font-bold hover:border-gray-400">
                     Página Inicial
                   </Link>
                   <Link
                     href="/quem-somos"
-                    className="btn-bc hover:border-gray-400"
+                    className="uppercase font-bold hover:border-gray-400"
                   >
                     Quem Somos
                   </Link>
                 </div>
-                <div className="grid grid-cols-2">
+                <div className="grid grid-cols-2 p-5 gap-5">
                   <div>
-                    <h1 className="text-md text-gray-600 pb-2 justify-center text-gray-500 flex items-center space-x-1">
+                    <h1 className="text-md text-gray-600 pb-2 text-white font-bold flex items-center">
                       <span className="uppercase">Feminino</span>
                     </h1>
                     <Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1 ml-2">
+                      <div className="text-white flex items-center ml-2">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
                           Calçados
                         </span>
                       </div>
                     </Link>
                     <Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1 ml-2">
+                      <div className="text-white flex items-center ml-2">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
                           Linha Confortável
                         </span>
                       </div>
                     </Link>
                     <Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1 ml-2">
+                      <div className="text-white flex items-center ml-2">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
                           Acessórios
                         </span>
@@ -146,18 +103,18 @@ const Hamburger = () => {
                     </Link>
                   </div>
                   <div>
-                    <h1 className="text-md text-gray-600 pb-2 justify-center text-gray-500 flex items-center space-x-1">
+                    <h1 className="text-md text-gray-600 pb-2 text-white font-bold flex items-center">
                       <span className="uppercase">Masculino</span>
                     </h1>
                     <Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1">
+                      <div className="text-white flex items-center">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
                           Calçados
                         </span>
                       </div>
                     </Link>
                     <Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1">
+                      <div className="text-white flex items-center">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
                           Acessórios
                         </span>
@@ -165,38 +122,38 @@ const Hamburger = () => {
                     </Link>
                   </div>
                   <div className="pt-4">
-                    <h1 className="text-md text-gray-600 pb-2 justify-center text-gray-500 flex items-center space-x-1">
+                    <h1 className="text-md text-gray-600 pb-2 text-white font-bold flex items-center">
                       <span className="uppercase">Esporte</span>
                     </h1>
                     <Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1 ml-2">
+                      <div className="text-white flex items-center ml-2">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
-                        Tênis
+                          Tênis
                         </span>
                       </div>
                     </Link>
                     <Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1 ml-2">
+                      <div className="text-white flex items-center ml-2">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
                           Corrida e Crossfit
                         </span>
                       </div>
                     </Link>
                     <Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1 ml-2">
+                      <div className="text-white flex items-center ml-2">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
                           Chuteiras
                         </span>
                       </div>
                     </Link>
                     <Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1 ml-2">
+                      <div className="text-white flex items-center ml-2">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
                           Roupas Esportivas
                         </span>
                       </div>
                     </Link><Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1 ml-2">
+                      <div className="text-white flex items-center ml-2">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
                           Acessórios
                         </span>
@@ -204,18 +161,18 @@ const Hamburger = () => {
                     </Link>
                   </div>
                   <div className="pt-4">
-                    <h1 className="text-md text-gray-600 justify-center text-gray-500 flex items-center space-x-1">
+                    <h1 className="text-md text-gray-600 text-white font-bold flex items-center">
                       <span className="uppercase">Infantil</span>
                     </h1>
                     <Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1">
+                      <div className="text-white flex items-center">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
                           Masculino
                         </span>
                       </div>
                     </Link>
                     <Link href="#">
-                      <div className="text-gray-500 flex items-center space-x-1">
+                      <div className="text-white flex items-center">
                         <span className="hover:border-b-2 border-b-2 border-transparent hover:border-bc text-sm">
                           Feminino
                         </span>

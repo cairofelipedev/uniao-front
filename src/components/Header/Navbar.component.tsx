@@ -136,7 +136,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Tênis
                           </h1>
                         </button>
@@ -157,7 +157,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Sapatilhas
                           </h1>
                         </button>
@@ -178,7 +178,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Sandálias
                           </h1>
                         </button>
@@ -199,7 +199,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Tamancos
                           </h1>
                         </button>
@@ -220,7 +220,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Rasteiras
                           </h1>
                         </button>
@@ -241,7 +241,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Papetes
                           </h1>
                         </button>
@@ -262,7 +262,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Botas
                           </h1>
                         </button>
@@ -286,7 +286,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Tênis
                           </h1>
                         </button>
@@ -307,7 +307,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Sapatilhas
                           </h1>
                         </button>
@@ -328,7 +328,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Sandálias
                           </h1>
                         </button>
@@ -349,7 +349,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Tamancos
                           </h1>
                         </button>
@@ -370,7 +370,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Chinelos
                           </h1>
                         </button>
@@ -394,7 +394,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Bolsas
                           </h1>
                         </button>
@@ -415,7 +415,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Carteiras
                           </h1>
                         </button>
@@ -436,7 +436,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                           Relógios
                           </h1>
                         </button>
@@ -444,7 +444,7 @@ const Navbar = () => {
                     </li>
                   </div>
                   <div className="">
-                    <img src="/logo.png" alt="" className="py-16 w-72"/>
+                    <img src="/images/sandalias.png" alt="" className="py-16 w-72"/>
                   </div>
                 </div>
               </ul>
@@ -485,7 +485,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Casual
                           </h1>
                         </button>
@@ -506,7 +506,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Social
                           </h1>
                         </button>
@@ -527,7 +527,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                           Sandálias
                           </h1>
                         </button>
@@ -548,7 +548,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Botas
                           </h1>
                         </button>
@@ -572,7 +572,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Carteiras
                           </h1>
                         </button>
@@ -593,7 +593,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                           Relógios
                           </h1>
                         </button>
@@ -601,7 +601,7 @@ const Navbar = () => {
                     </li>
                   </div>
                   <div className="">
-                    <img src="/logo.png" alt="" className="py-16 w-72"/>
+                    <img src="/images/chinelos.png" alt="" className="py-16 w-72"/>
                   </div>
                 </div>
               </ul>
@@ -642,7 +642,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Masculino
                           </h1>
                         </button>
@@ -663,7 +663,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Feminino
                           </h1>
                         </button>
@@ -687,7 +687,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Masculino
                           </h1>
                         </button>
@@ -708,7 +708,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Feminino
                           </h1>
                         </button>
@@ -732,7 +732,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Campo
                           </h1>
                         </button>
@@ -753,7 +753,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Futsal
                           </h1>
                         </button>
@@ -774,7 +774,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Society
                           </h1>
                         </button>
@@ -798,7 +798,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Masculino
                           </h1>
                         </button>
@@ -819,7 +819,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Feminino
                           </h1>
                         </button>
@@ -843,7 +843,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Bola
                           </h1>
                         </button>
@@ -864,7 +864,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Meião
                           </h1>
                         </button>
@@ -885,7 +885,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                           Bolsas
                           </h1>
                         </button>
@@ -906,7 +906,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                           Boné
                           </h1>
                         </button>
@@ -927,7 +927,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                           Outros
                           </h1>
                         </button>
@@ -935,7 +935,7 @@ const Navbar = () => {
                     </li>
                   </div>
                   <div className="">
-                    <img src="/logo.png" alt="" className="py-8 w-72"/>
+                    <img src="/images/categoria1.png" alt="" className="py-8 w-72"/>
                   </div>
                 </div>
               </ul>
@@ -976,7 +976,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Tênis
                           </h1>
                         </button>
@@ -997,7 +997,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Sapatos
                           </h1>
                         </button>
@@ -1018,7 +1018,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Sandálias
                           </h1>
                         </button>
@@ -1042,7 +1042,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Tênis
                           </h1>
                         </button>
@@ -1063,7 +1063,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Sapatilhas
                           </h1>
                         </button>
@@ -1084,7 +1084,7 @@ const Navbar = () => {
                               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                             />
                           </svg>
-                          <h1 className="ml-2 mr-5 text-xs text-gray-900">
+                          <h1 className="ml-2 mr-5 text-md text-gray-900">
                             Sandálias
                           </h1>
                         </button>
